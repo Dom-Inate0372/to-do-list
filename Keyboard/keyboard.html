@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard ni kgwd wayne</title>
+    <style>
+       
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .keyboard {
+            background: #555555;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(2, 1, 1, 0.3);
+            max-width: 900px;
+        }
+        
+        .keyboard-row {
+            display: flex;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+        
+        .key {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin: 3px;
+            background: linear-gradient(to bottom, #e8e8e8, #d0d0d0);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 3px 0 #666, 0 5px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.1s;
+            user-select: none;
+        }
+        
+        .key:hover {
+            background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+        }
+        
+        .key:active {
+            transform: translateY(3px);
+            box-shadow: 0 0 0 #666, 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .key.active {
+            background: linear-gradient(to bottom, #0ab2cf, #0c5bb4);
+            box-shadow: 0 0 20px #0637a1, 0 3px 0 #666;
+        }
+        
+        .key.space {
+            width: 300px;
+        }
+        
+        .key.tab {
+            width: 80px;
+        }
+        
+        .key.caps {
+            width: 90px;
+        }
+        
+        .key.shift {
+            width: 110px;
+        }
+        
+        .key.enter {
+            width: 90px;
+        }
+        
+        .key.backspace {
+            width: 90px;
+        }
+        
+        .key.ctrl, .key.alt, .key.win, .key.fn {
+            width: 70px;
+            font-size: 12px;
+        }
+        
+        .tongue {
+            position: absolute;
+            bottom: -20px;
+            width: 30px;
+            height: 15px;
+            background: #ff6b81;
+            border-radius: 15px 15px 0 0;
+            transform-origin: top center;
+            transform: scaleY(0);
+            transition: transform 0.3s;
+            z-index: 2;
+        }
+        
+        .key:hover .tongue {
+            transform: scaleY(1);
+        }
+        
+        .tongue::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 10px;
+            background: #ff4757;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .drool {
+            position: absolute;
+            background: rgba(173, 216, 230, 0.7);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .key:hover .drool {
+            opacity: 1;
+        }
+        
+        .drool-1 {
+            width: 5px;
+            height: 5px;
+            bottom: -10px;
+            left: 15px;
+            transition-delay: 0.2s;
+        }
+        
+        .drool-2 {
+            width: 4px;
+            height: 4px;
+            bottom: -8px;
+            left: 25px;
+            transition-delay: 0.3s;
+        }
+        
+        .drool-3 {
+            width: 3px;
+            height: 3px;
+            bottom: -6px;
+            left: 35px;
+            transition-delay: 0.4s;
+        }
+        
+        .key-label {
+            position: relative;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="keyboard">
+        <!-- First Row -->
+        <div class="keyboard-row">
+            <div class="key" data-key="Escape"><span class="key-label">Esc</span><div class="tongue"></div><div class="drool drool-1"></div><div class="drool drool-2"></div><div class="drool drool-3"></div></div>
+            <div class="key" data-key="F1"><span class="key-label">F1</span><div class="tongue"></div></div>
+            <div class="key" data-key="F2"><span class="key-label">F2</span><div class="tongue"></div></div>
+            <div class="key" data-key="F3"><span class="key-label">F3</span><div class="tongue"></div></div>
+            <div class="key" data-key="F4"><span class="key-label">F4</span><div class="tongue"></div></div>
+            <div class="key" data-key="F5"><span class="key-label">F5</span><div class="tongue"></div></div>
+            <div class="key" data-key="F6"><span class="key-label">F6</span><div class="tongue"></div></div>
+            <div class="key" data-key="F7"><span class="key-label">F7</span><div class="tongue"></div></div>
+            <div class="key" data-key="F8"><span class="key-label">F8</span><div class="tongue"></div></div>
+            <div class="key" data-key="F9"><span class="key-label">F9</span><div class="tongue"></div></div>
+            <div class="key" data-key="F10"><span class="key-label">F10</span><div class="tongue"></div></div>
+            <div class="key" data-key="F11"><span class="key-label">F11</span><div class="tongue"></div></div>
+            <div class="key" data-key="F12"><span class="key-label">F12</span><div class="tongue"></div></div>
+        </div>
+        
+        <!-- Second Row -->
+        <div class="keyboard-row">
+            <div class="key" data-key="Backquote"><span class="key-label">`</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit1"><span class="key-label">1</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit2"><span class="key-label">2</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit3"><span class="key-label">3</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit4"><span class="key-label">4</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit5"><span class="key-label">5</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit6"><span class="key-label">6</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit7"><span class="key-label">7</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit8"><span class="key-label">8</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit9"><span class="key-label">9</span><div class="tongue"></div></div>
+            <div class="key" data-key="Digit0"><span class="key-label">0</span><div class="tongue"></div></div>
+            <div class="key" data-key="Minus"><span class="key-label">-</span><div class="tongue"></div></div>
+            <div class="key" data-key="Equal"><span class="key-label">=</span><div class="tongue"></div></div>
+            <div class="key backspace" data-key="Backspace"><span class="key-label">Backspace</span><div class="tongue"></div></div>
+        </div>
+        
+        <!-- Third Row -->
+        <div class="keyboard-row">
+            <div class="key tab" data-key="Tab"><span class="key-label">Tab</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyQ"><span class="key-label">Q</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyW"><span class="key-label">W</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyE"><span class="key-label">E</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyR"><span class="key-label">R</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyT"><span class="key-label">T</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyY"><span class="key-label">Y</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyU"><span class="key-label">U</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyI"><span class="key-label">I</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyO"><span class="key-label">O</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyP"><span class="key-label">P</span><div class="tongue"></div></div>
+            <div class="key" data-key="BracketLeft"><span class="key-label">[</span><div class="tongue"></div></div>
+            <div class="key" data-key="BracketRight"><span class="key-label">]</span><div class="tongue"></div></div>
+            <div class="key" data-key="Backslash"><span class="key-label">\</span><div class="tongue"></div></div>
+        </div>
+        
+        <!-- Fourth Row -->
+        <div class="keyboard-row">
+            <div class="key caps" data-key="CapsLock"><span class="key-label">Caps</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyA"><span class="key-label">A</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyS"><span class="key-label">S</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyD"><span class="key-label">D</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyF"><span class="key-label">F</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyG"><span class="key-label">G</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyH"><span class="key-label">H</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyJ"><span class="key-label">J</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyK"><span class="key-label">K</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyL"><span class="key-label">L</span><div class="tongue"></div></div>
+            <div class="key" data-key="Semicolon"><span class="key-label">;</span><div class="tongue"></div></div>
+            <div class="key" data-key="Quote"><span class="key-label">'</span><div class="tongue"></div></div>
+            <div class="key enter" data-key="Enter"><span class="key-label">Enter</span><div class="tongue"></div></div>
+        </div>
+        
+        <!-- Fifth Row -->
+        <div class="keyboard-row">
+            <div class="key shift" data-key="ShiftLeft"><span class="key-label">Shift</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyZ"><span class="key-label">Z</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyX"><span class="key-label">X</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyC"><span class="key-label">C</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyV"><span class="key-label">V</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyB"><span class="key-label">B</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyN"><span class="key-label">N</span><div class="tongue"></div></div>
+            <div class="key" data-key="KeyM"><span class="key-label">M</span><div class="tongue"></div></div>
+            <div class="key" data-key="Comma"><span class="key-label">,</span><div class="tongue"></div></div>
+            <div class="key" data-key="Period"><span class="key-label">.</span><div class="tongue"></div></div>
+            <div class="key" data-key="Slash"><span class="key-label">/</span><div class="tongue"></div></div>
+            <div class="key shift" data-key="ShiftRight"><span class="key-label">Shift</span><div class="tongue"></div></div>
+        </div>
+        
+        <!-- Sixth Row -->
+        <div class="keyboard-row">
+            <div class="key ctrl" data-key="ControlLeft"><span class="key-label">Ctrl</span><div class="tongue"></div></div>
+            <div class="key win" data-key="MetaLeft"><span class="key-label">Win</span><div class="tongue"></div></div>
+            <div class="key alt" data-key="AltLeft"><span class="key-label">Alt</span><div class="tongue"></div></div>
+            <div class="key space" data-key="Space"><span class="key-label"></span><div class="tongue"></div></div>
+            <div class="key alt" data-key="AltRight"><span class="key-label">Alt</span><div class="tongue"></div></div>
+            <div class="key fn" data-key="Fn"><span class="key-label">Fn</span><div class="tongue"></div></div>
+            <div class="key ctrl" data-key="ControlRight"><span class="key-label">Ctrl</span><div class="tongue"></div></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const keys = document.querySelectorAll('.key');
+            
+            // Click lighting effect
+            keys.forEach(key => {
+                key.addEventListener('mousedown', function() {
+                    this.classList.add('active');
+                    
+                    // Remove the active class after a short delay
+                    setTimeout(() => {
+                        this.classList.remove('active');
+                    }, 300);
+                });
+            });
+            
+            // Optional: Add keyboard event listeners for physical keyboard interaction
+            document.addEventListener('keydown', function(e) {
+                const keyElement = document.querySelector(`.key[data-key="${e.code}"]`);
+                if (keyElement) {
+                    keyElement.classList.add('active');
+                }
+            });
+            
+            document.addEventListener('keyup', function(e) {
+                const keyElement = document.querySelector(`.key[data-key="${e.code}"]`);
+                if (keyElement) {
+                    keyElement.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
